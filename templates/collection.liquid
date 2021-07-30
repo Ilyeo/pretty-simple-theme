@@ -1,0 +1,18 @@
+{% paginate collection.products by 2 %}
+  <h1>{{ collection.title }}</h1>
+  {% for product in collection.products %}
+    <div>
+      <a href="{{ product.url | within: collection }}">{{ product.title }}</a>
+      {{ product.price | money }}
+      {% unless product.available %}<br><strong>sold out</strong>{% endunless %}
+      <a href="{{ product.url | within: collection }}">
+        <img loading="lazy" src="{{ product.featured_image.src | img_url: 'large' }}" alt="{{ product.featured_image.alt | escape }}" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}">
+      </a>
+    </div>
+  {% else %}
+    <p>no matches</p>
+  {% endfor %}
+  {% if paginate.pages > 1 %}
+    {{ paginate | default_pagination }}
+  {% endif %}
+{% endpaginate %}

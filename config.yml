@@ -1,0 +1,6 @@
+development:
+  password: ${PASSWORD}
+  theme_id: ${THEME_ID}
+  store: ${STORE}
+  ignores:
+  - .themekit_ignores

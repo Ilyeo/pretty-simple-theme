@@ -1,0 +1,50 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+    all: unset;
+    display: revert;
+}
+
+/* Preferred box-sizing value */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remove list styles (bullets/numbers) */
+ol, ul {
+    list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+    max-width: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+    border-collapse: collapse;
+}
+
+/* revert the 'white-space' property for textarea elements on Safari */
+textarea {
+    white-space: revert;
+}
+
+:root {
+ --black: hsla(0, 0%, 13%, 1);
+ --white: #fff;
+ --font-family-headings: 'Playfair Display', serif;
+ --font-family-underline-headings: 'Lato', sans-serif;
+ --font-family-paragraphs: 'Mulish', sans-serif;
+ --font-color-headings: hsla(60, 12%, 97%, 1);
+ --underline-color-headings: hsla(359, 40%, 59%, 1);
+ --font-color-paragraphs: hsla(60, 5%, 16%, 1);
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+}

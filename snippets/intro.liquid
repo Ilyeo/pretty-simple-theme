@@ -1,0 +1,57 @@
+<style>
+.intro {
+  margin-top: 34px;
+}
+
+.underline-heading {
+  font-size: 12px;
+  font-weight: 700;
+  font-family: var(--font-family-underline-headings);
+  text-align: center;
+}
+
+.underline-heading span {
+  border-bottom: 2px solid var(--underline-color-headings);
+  letter-spacing: 0.1em;
+  padding-bottom: 2px;
+}
+
+.heading {
+  font-family: var(--font-family-headings);
+  font-size: 32px;
+  margin: 14px auto 0;
+  max-width: 11ch;
+  text-align: center;
+}
+
+.message {
+  font-family: var(--font-family-paragraphs);
+  font-size: 14px;
+  color: var(--font-color-paragraphs);
+  max-width: 27ch;
+  text-align: center;
+  margin: 25px auto 0;
+}
+
+@media (min-width: 828px) {
+  .intro {
+    margin-top: 87px;
+  }
+
+  .heading {
+    font-size: 48px;
+    max-width: none;
+  }
+
+  .message {
+    font-size: 18px;
+    max-width: 82ch;
+  }
+}
+</style>
+
+<article class="intro">
+  <p class="underline-heading"><span>{{ settings.pre_heading }}</span></p>
+  <h1 class="heading">{{ settings.heading }}</h1>
+  <p class="message">{{ settings.message }}</p>
+</article>
